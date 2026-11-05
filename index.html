@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" type="image/x-icon" href="img/kpum.png" />
+    <link rel="icon" type="image/x-icon" href="img/logo.jpg" />
     <title>ZERO Sportswear</title>
   </head>
   <body>
@@ -42,7 +42,14 @@
         <p style="color: white; font-weight: bold">
           Yuk, mulai bikin jersey impianmu sekarang!
         </p>
-        <button onclick="window.open('https:wa.me/6285643888471', '_blank')">
+        <button
+          onclick="
+            window.open(
+              'https://api.whatsapp.com/send/?phone=6285643888471&text&type=phone_number&app_absent=0',
+              '_blank',
+            )
+          "
+        >
           Pesan Sekarang
         </button>
       </div>
@@ -150,7 +157,7 @@
 
     <div class="footer">ZERO Sportswear &copy; 2026</div>
 
-    <script src="https://unpkg.com"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script>
       AOS.init();
     </script>
