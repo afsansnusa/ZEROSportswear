@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="img/kpum.png" />
+    <title>ZERO Sportswear</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="logo">ZERO Sportswear</div>
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="main-menu"
+      >
+        <span class="menu-icon" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+        Menu
+      </button>
+      <ul class="menu" id="main-menu">
+        <li><a href="#home">Beranda</a></li>
+        <li><a href="#struktur">Keunggulan</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+    </div>
+
+    <div class="beranda" id="home">
+      <img src="img/background1.jpg" alt="" />
+      <div class="dalemnya">
+        <h1>Satu Tim, Satu Jersey, Satu Kekompakan.</h1>
+        <p>
+          Pakai jersey yang sama dengan nama dan nomor masing-masing. Tim jadi
+          terlihat kompak dan siap bertanding!
+        </p>
+        <p style="color: white; font-weight: bold">
+          Yuk, mulai bikin jersey impianmu sekarang!
+        </p>
+        <button onclick="window.open('https:wa.me/6285643888471', '_blank')">
+          Pesan Sekarang
+        </button>
+      </div>
+    </div>
+
+    <div class="container" id="struktur">
+      <h2>KEUNGGULAN ZERO Sportswear</h2>
+
+      <div class="menu-grid">
+        <div class="card">
+          <img src="img/(1).jpg" alt="Alfi Syahrin Ikhlasifirly" />
+          <div class="content">
+            <h3>Responsive Customer Service</h3>
+            <p>
+              Tanya, konsultasi, atau mau update progress order? Kami selalu
+              siap bantu kamu lewat WhatsApp, email, atau media sosial. Respons
+              cepat dan layanan ramah
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="img/(2).jpg" alt="anjali" />
+          <div class="content">
+            <h3>No Minimum Order</h3>
+            <p>
+              Pesan satuan? Bisa! Pesan banyak? Lebih hemat! Kami fleksibel —
+              cocok untuk personal use, komunitas, atau bisnis yang ingin tampil
+              beda.
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="img/(3).jpg" alt="Dina" />
+          <div class="content">
+            <h3>Fast Production & Delivery</h3>
+            <p>
+              Proses produksi cepat dan pengiriman yang efisien, memastikan
+              jersey Anda tiba tepat waktu.
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="img/4.jpg" alt="Dina" />
+          <div class="content">
+            <h3>Print Quality Guarantee</h3>
+            <p>
+              Kami menjamin kualitas cetak yang tinggi dan tahan lama, sehingga
+              jersey Anda selalu terlihat profesional dan menarik.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-section" id="kontak">
+      <div class="contact-map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d988.0510350545381!2d110.3952629430969!3d-7.873696229339127!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a569c42d98bc7%3A0x2a1d5ac67e7a399d!2sGg.%20Dahlia%2C%20Kec.%20Pleret%2C%20Kabupaten%20Bantul%2C%20Daerah%20Istimewa%20Yogyakarta%2055791!5e0!3m2!1sen!2sid!4v1793864886301!5m2!1sen!2sid"
+          width="600"
+          height="200"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+        >
+        </iframe>
+      </div>
+      <div class="contact-info">
+        <h2>Our Contact</h2>
+        <p>
+          <strong>Alamat:</strong> Gg. Dahlia, Wonokromo I, Wonokromo, Kec.
+          Pleret, Kabupaten Bantul, Daerah Istimewa Yogyakarta 55791
+        </p>
+        <p>
+          <strong>Email:</strong>
+          <a href="mailto:zerosportswear@gmail.com">zerosportswear@gmail.com</a>
+        </p>
+        <p>
+          <strong>Instagram:</strong>
+          <a
+            href="https://instagram.com/zerosportswear_"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            @zerosportswear_
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <div class="footer">ZERO Sportswear &copy; 2026</div>
+
+    <script src="https://unpkg.com"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script>
+      const navbar = document.querySelector(".navbar");
+      const menuToggle = document.querySelector(".menu-toggle");
+      const menuLinks = document.querySelectorAll(".navbar .menu a");
+
+      menuToggle.addEventListener("click", () => {
+        const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
+        menuToggle.setAttribute("aria-expanded", String(!isExpanded));
+        navbar.classList.toggle("menu-open", !isExpanded);
+      });
+
+      menuLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          menuToggle.setAttribute("aria-expanded", "false");
+          navbar.classList.remove("menu-open");
+        });
+      });
+    </script>
+  </body>
+</html>
